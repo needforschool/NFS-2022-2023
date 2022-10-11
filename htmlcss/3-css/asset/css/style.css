@@ -25,6 +25,8 @@ body {
 
 header {
     background-color: tomato;
+    position: fixed;
+    width:100%;
 }
 .wrap {
     max-width: 1000px;
@@ -37,6 +39,9 @@ header {
     width:100%;
     margin: 0 auto;
     background-color: lime;
+}
+#formulaire {
+    padding-top:100px;
 }
 form {
     padding: 1rem;
@@ -62,11 +67,22 @@ p.fluide {
 }
 #blog .bigbox .minibox1 {
     background-color: red;
+    position: relative;
+}
+#blog .bigbox .microbox1 {
+    background-color: lime;
+    width: 50px;height: 50px;
+    position: absolute;bottom:-25px;right:-25px;
 }
 #blog .bigbox .minibox2 {
     background-color: chartreuse;
 }
 #blog .bigbox .minibox3 {
     background-color: crimson;
+    position: relative;
+}
+#blog .bigbox .minibox3 img {
+    border-radius: 50%;
+    position: absolute;right:-50px; top:-50px;
 }
 
