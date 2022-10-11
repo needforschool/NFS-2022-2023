@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Page contact</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="asset/css/style.css">
 </head>
 <body>
     <header>
@@ -17,5 +17,45 @@
         </nav>
     </header>
     <h1>Page contact</h1>
+
+<!--    <form action="" method="post" novalidate>-->
+    <form action="" method="post">
+        <fieldset>
+            <legend>Infos</legend>
+
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" value="Quidel" placeholder="Ici votre nom" required>
+        </fieldset>
+
+        <input type="email"><br>
+        <input type="password"><br>
+        <input type="color"><br>
+        <input type="date"><br>
+        <input type="datetime-local"><br>
+        <input type="time"><br>
+        <input type="number" min="1" max="12"><br>
+        <input type="url">
+        <input type="hidden" name="article" value="14">
+        <input type="file">
+
+        <textarea name="" id=""></textarea><br>
+
+        <input type="radio" name="gender" value="homme"> Homme <br>
+        <input type="radio" name="gender" value="femme"> Femme <br>
+        <input type="radio" checked name="gender" value="autre"> Autres <br>
+
+        <input type="checkbox" name="fruit[]" value="Banane"> Banane<br>
+        <input type="checkbox" checked name="fruit[]" value="Kiwi"> Kiwi <br>
+        <input type="checkbox" checked name="fruit[]" value="Fraise"> Fraise <br>
+
+<!--        <select name="legumes" id="legumes" multiple>-->
+        <select name="legumes" id="legumes">
+            <option value="poireau">Poireaux</option>
+            <option value="courgette">Courgettes</option>
+            <option value="tomate" selected>Tomates</option>
+        </select>
+
+        <input type="submit" value="Inscription">
+    </form>
 </body>
 </html>
