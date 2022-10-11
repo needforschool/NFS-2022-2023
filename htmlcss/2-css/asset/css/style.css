@@ -1,0 +1,39 @@
+body {
+    background-color: aquamarine;
+}
+/* Selection par balise */
+div section p span {
+
+}
+/* Selection par class */
+p.font30 {
+    color:lime;
+    font-size: 30px;
+}
+p.colorred {
+    color:red;
+}
+/* Selection par id */
+#blog h1 {
+    color: chartreuse;
+}
+#blog p.cla2.cla1.cla3 {
+    font-weight: bold;
+}
+/* Selection par attribut */
+input[type=text] {
+    background-color: orangered;
+}
+input[type=submit] {
+    background-color: green;
+    color:white;
+    border:none;
+}
+/* Sélecteur de voisin direct */
+#selectorplus ul + p {
+    color: lime;
+    font-size: 50px;
+}
+#selectorvague p ~ span {
+    background-color: magenta;
+}
