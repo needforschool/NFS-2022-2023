@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.clear:before, .clear:after {
+    content: ' ';
+    display: table;
+}
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom: 1;
+}
+ul, ol {
+    list-style: none;
+}
+body {
+    /*background-color: darkkhaki;*/
+    background: url("../img/sable.jpg") no-repeat 200px 300px ;
+    background-size: 300px 200px;
+    font: 400 18px/1.4 Verdana, Arial, sans-serif;
+}
+
+header {
+    background-color: tomato;
+}
+.wrap {
+    max-width: 1000px;
+    width:100%;
+    margin: 0 auto;
+    /*background-color: lime;*/
+}
+.wrap2 {
+    max-width: 500px;
+    width:100%;
+    margin: 0 auto;
+    background-color: lime;
+}
+form {
+    padding: 1rem;
+}
+
+label {
+    display: block;
+}
+input {
+    width: 100%;
+    padding: 1rem;
+}
+p.fluide {
+    font-size: 4vw;
+}
+
+#blog {background-color: blue;}
+#blog .bigbox {}
+#blog .bigbox .minibox {
+    height:200px;
+    width: 33.33333333333%;
+    float:left;
+}
+#blog .bigbox .minibox1 {
+    background-color: red;
+}
+#blog .bigbox .minibox2 {
+    background-color: chartreuse;
+}
+#blog .bigbox .minibox3 {
+    background-color: crimson;
+}
+
