@@ -30,7 +30,9 @@ body {
     display: flex;
     gap:1rem;
 }
-
+#masthead nav ul {
+    padding-right: 1rem;
+}
 #masthead nav ul li a {
     color:#fff;
     text-decoration: none;
