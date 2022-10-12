@@ -3,7 +3,91 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root {
+    --white: #fff;
+    --gris: #9d9d9c;
+    --orange: #ec6838;
+}
+a {
+    text-decoration: none;
+}
+img {
+    vertical-align: bottom;
+    width: 100%;
+}
 ul, ol {
     list-style: none;
 }
+body {
+    background-color: var(--white);
+    color: var(--gris);
+    font: 400 16px/1.5 'Raleway', sans-serif;
+}
 
+.wrap {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.wrap2 {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* header */
+#masthead {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+#masthead img {
+    width:350px;
+}
+/* intro home */
+#intro {
+    margin: 2rem 0;
+}
+#intro .wrap{
+    display: flex;
+    gap:3rem;
+}
+#intro .wrap .box {
+    width:50%;
+}
+#intro .wrap .box_text {
+    padding-top: 4rem;
+}
+/* partners */
+#partners {}
+#partners .wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#partners .one_partener {
+    width: 24%;
+    margin-bottom: 2rem;
+}
+#partners .one_partener__img {
+    position: relative;
+    margin-bottom: .6rem;
+}
+#partners .lecteur {
+    background: url('../img/player1.png');
+    background-size: 42px 42px;
+    width:42px;
+    height:42px;
+    position: absolute;
+    top:1rem;left:1rem;
+}
+#partners h2 {
+    font-size: 1.3rem;
+    color: #000;
+    font-weight: 300;
+}
+#partners h3 {
+    font-weight: 700;
+    color: var(--orange);
+}
