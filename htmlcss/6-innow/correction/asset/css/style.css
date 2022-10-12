@@ -74,6 +74,13 @@ body {
     position: relative;
     margin-bottom: .6rem;
 }
+#partners .one_partener__img img{
+    transition: filter 1s, transform 2s;
+}
+#partners .one_partener__img img:hover {
+    filter: grayscale(70%);
+    transform: rotate(2deg);
+}
 #partners .lecteur {
     background: url('../img/player1.png');
     background-size: 42px 42px;
@@ -91,3 +98,41 @@ body {
     font-weight: 700;
     color: var(--orange);
 }
+
+
+/* single.html */
+
+
+
+
+
+/* Responsive - media query */
+@media screen and (max-width: 950px) {
+    #intro .wrap{
+        flex-direction: column;
+        gap:1rem;
+    }
+    #intro .wrap .box {
+        width:100%;
+    }
+    #intro .wrap .box_text {
+        padding-top: 0;
+    }
+    #partners .one_partener {
+        width: 32%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #partners .one_partener {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    #partners .one_partener {
+        width: 100%;
+    }
+}
+
+
