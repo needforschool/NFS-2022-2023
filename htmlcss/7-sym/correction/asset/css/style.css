@@ -43,6 +43,7 @@ body {
     position: fixed;
     width: 100%;
     padding: .6rem;
+
 }
 #masthead .bigwrap {
     display: flex;
@@ -52,10 +53,14 @@ body {
 #masthead .logo {
     font-family: 'Libre Baskerville', serif;
     font-size: 1.9rem;
+    color: var(--blanc);
 }
 #masthead nav ul {
     display: flex;
     gap:1rem;
+}
+#masthead nav ul a {
+    color: var(--blanc);
 }
 
 
