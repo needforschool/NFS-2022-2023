@@ -67,10 +67,26 @@ body {
     color: #000;
 }
 
+#intro {
+    height: 100vh;
+    background: url('https://picsum.photos/id/38/1200/500') no-repeat center center/cover;
+    display: flex;
+}
+#intro > div {
+    margin: auto;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 1rem;
+    max-width: 600px;
+}
+#intro strong {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.6rem;
+}
 
 
 
-#intro {}
+
 #component {}
 #learn {}
 #partenaire {}
