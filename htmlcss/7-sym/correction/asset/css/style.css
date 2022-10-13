@@ -116,17 +116,21 @@ body {
 #component .bloc_text p{
     text-align: justify;
 }
+#learn {
+    background-color: var(--blanc);
+}
+#learn .bigwrap {
+    display: flex;
+}
+#learn .bigwrap > div {
+    width:50%;
+}
 
 
 
 
 
 
-
-
-
-
-#learn {}
 #partenaire {}
 #testimonial {}
 #contact {}
