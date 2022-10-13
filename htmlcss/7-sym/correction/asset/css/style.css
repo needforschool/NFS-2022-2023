@@ -159,8 +159,48 @@ body {
 
 }
 
+#testimonial {
+    margin: 3rem 0;
+}
+#testimonial h2 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+#testimonial .avis_all {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem
+}
+#testimonial .avis_all > div {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--blanc);
+
+}
+
+#testimonial .testi_text {
+    width: 80%;
+}
+#testimonial .testi_text i {
+    font-size: 1.8rem;
+}
+#testimonial .testi_user {
+    width: 20%;
+    font-size: 1.5rem;
+}
+#testimonial .testi_user img {
+    width:100px;
+    border-radius: 50%;
+}
+#testimonial .testi_user .text_job {
+    font-weight: bold;
+}
+#testimonial .avis_all > div:nth-child(2n) {
+    flex-direction: row-reverse;
+}
 
 
-#testimonial {}
+
 #contact {}
 #colophon {}
