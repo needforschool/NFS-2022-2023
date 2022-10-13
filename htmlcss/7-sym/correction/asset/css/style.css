@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --vert: #4f805d;
+    --vertclai: #8bb092;
+    --gris: #ddd;
+    --blanc: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+img {
+    vertical-align: bottom;
+    width: 100%;
+}
+ul, ol {
+    list-style: none;
+}
+
+/* font-family: 'Libre Baskerville', serif;
+font-family: 'Quicksand', sans-serif; */
+body {
+    /*background-color: var(--white);*/
+    /*color: var(--gris);*/
+    /*font: 400 16px/1.7 'Raleway', sans-serif;*/
+}
+
+
+section {
+    height:500px;
+}
+
+/*.wrap {*/
+/*    max-width: 1300px;*/
+/*    width: 100%;*/
+/*    margin: 0 auto;*/
+/*  */
+/*}*/
+
+#masthead {}
+#intro {}
+#component {}
+#learn {}
+#partenaire {}
+#testimonial {}
+#contact {}
+#colophon {}
