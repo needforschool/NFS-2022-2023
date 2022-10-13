@@ -28,22 +28,15 @@ ul, ol {
 /* font-family: 'Libre Baskerville', serif;
 font-family: 'Quicksand', sans-serif; */
 body {
-    /*background-color: var(--white);*/
-    /*color: var(--gris);*/
-    /*font: 400 16px/1.7 'Raleway', sans-serif;*/
+    background-color: var(--gris);
+    color:#000;
+    font: 400 16px/1.4 'Quicksand', sans-serif;
 }
 
-
-section {
-    height:500px;
-}
-
-/*.wrap {*/
-/*    max-width: 1300px;*/
-/*    width: 100%;*/
-/*    margin: 0 auto;*/
-/*  */
-/*}*/
+.bigwrap {max-width: 1600px; width:100%;margin: 0 auto;}
+.wrap {max-width: 1300px; width:100%;margin: 0 auto;}
+.wrap2 {max-width: 1200px; width:100%;margin: 0 auto;}
+.wrap3 {max-width: 500px; width:100%;margin: 0 auto;}
 
 #masthead {}
 #intro {}
