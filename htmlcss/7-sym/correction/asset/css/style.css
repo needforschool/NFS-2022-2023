@@ -61,6 +61,10 @@ body {
 }
 #masthead nav ul a {
     color: var(--blanc);
+    transition: color .5s;
+}
+#masthead nav ul a:hover {
+    color: #000;
 }
 
 
