@@ -150,6 +150,7 @@ body {
 }
 #partenaire .all_partners .shadow {
     width: 23%;
+    background-color: var(--blanc);
 }
 #partenaire .all_partners i {
     font-size: 3rem;
