@@ -125,13 +125,41 @@ body {
 #learn .bigwrap > div {
     width:50%;
 }
+#learn .learn_text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#learn .learn_text h2 {
+    font-size: 2rem;
+}
+#learn .learn_text img {
+    width: 30%;
+    margin: 1rem 0;
+}
+
+#partenaire {margin: 4rem 0;}
+#partenaire .all_partners{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 1.3rem;font-weight: 700;
+}
+#partenaire .all_partners .shadow {
+    width: 23%;
+}
+#partenaire .all_partners i {
+    font-size: 3rem;
+    color: var(--vert);
+    margin: 1rem 0;
+
+}
 
 
 
-
-
-
-#partenaire {}
 #testimonial {}
 #contact {}
 #colophon {}
