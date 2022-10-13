@@ -5,7 +5,7 @@
 }
 :root {
     --vert: #4f805d;
-    --vertclai: #8bb092;
+    --vertclair: #8bb092;
     --gris: #ddd;
     --blanc: #fff;
 }
@@ -24,9 +24,11 @@ img {
 ul, ol {
     list-style: none;
 }
-
-/* font-family: 'Libre Baskerville', serif;
-font-family: 'Quicksand', sans-serif; */
+.shadow {
+    -webkit-box-shadow: 0 10px 6px -6px var(--vertclair);
+    -moz-box-shadow: 0 10px 6px -6px var(--vertclair);
+    box-shadow: 0 10px 6px -6px var(--vertclair);
+}
 body {
     background-color: var(--gris);
     color:#000;
@@ -34,7 +36,7 @@ body {
 }
 
 .bigwrap {max-width: 1600px; width:100%;margin: 0 auto;}
-.wrap {max-width: 1300px; width:100%;margin: 0 auto;}
+.wrap {max-width: 1332px; width:100%;margin: 0 auto;padding: 0 1rem;}
 .wrap2 {max-width: 1200px; width:100%;margin: 0 auto;}
 .wrap3 {max-width: 500px; width:100%;margin: 0 auto;}
 
@@ -66,7 +68,6 @@ body {
 #masthead nav ul a:hover {
     color: #000;
 }
-
 #intro {
     height: 100vh;
     background: url('https://picsum.photos/id/38/1200/500') no-repeat center center/cover;
@@ -83,11 +84,48 @@ body {
     font-family: 'Libre Baskerville', serif;
     font-size: 1.4rem;
 }
+#component {
+    margin: 6rem 0;
+}
+#component h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+#component ul.boxs{
+    display: flex;
+    justify-content: space-between;
+}
+#component ul.boxs li {
+    width: 31.5%;
+    background-color: var(--blanc);
+}
+#component .bloc_text {
+    padding: 2rem 1rem;
+}
+#component .bloc_text h3{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+#component .bloc_text .separator{
+    background-color: var(--vert);
+    height: 3px;
+    width: 100px;
+    margin: 1rem auto;
+}
+#component .bloc_text p{
+    text-align: justify;
+}
 
 
 
 
-#component {}
+
+
+
+
+
+
 #learn {}
 #partenaire {}
 #testimonial {}
