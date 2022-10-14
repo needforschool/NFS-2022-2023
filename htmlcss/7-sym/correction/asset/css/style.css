@@ -29,6 +29,28 @@ ul, ol {
     -moz-box-shadow: 0 10px 6px -6px var(--vertclair);
     box-shadow: 0 10px 6px -6px var(--vertclair);
 }
+label {
+    display: block;
+}
+input, textarea, select  {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: .6rem;
+    border-radius: 9px;
+    border:none;
+}
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+input[type=submit] {
+    cursor: pointer;
+    transition: all .4s;
+}
+input[type=submit]:hover  {
+    background-color: var(--vert);
+    color: var(--blanc);
+}
 body {
     background-color: var(--gris);
     color:#000;
@@ -176,9 +198,7 @@ body {
     align-items: center;
     padding: 1rem 2rem;
     background-color: var(--blanc);
-
 }
-
 #testimonial .testi_text {
     width: 80%;
 }
@@ -200,7 +220,100 @@ body {
     flex-direction: row-reverse;
 }
 
+#contact {
+    margin: 3rem 0;
+}
+#contact form {
+    padding: 0 1rem;
+}
+#contact h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+#colophon {
+    background-color: var(--vert);
+    color: var(--blanc);
+}
+#colophon .bigwrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+#colophon a, #colophon a i {
+    color: var(--blanc);
+}
+#colophon a:hover, #colophon a:hover i {
+    color: var(--vertclair);
+}
+#colophon .reseau i {
+    font-size: 2rem;
+}
+#colophon .reseau i {
+    transition: all .5s;
+}
+#colophon .reseau i:hover {
+    transform: scale(1.2);
+}
+#colophon .reseau ul {
+    display: flex;
+    gap:1rem;
+}
 
 
-#contact {}
-#colophon {}
+@media screen and (max-width: 960px) {
+    #component ul.boxs{
+        flex-direction: column;
+        gap:2rem;
+    }
+    #component ul.boxs li {
+        width: 100%;
+    }
+    #learn .bigwrap {
+        flex-direction: column;
+    }
+    #learn .bigwrap > div {
+        width:100%;
+    }
+    #learn .learn_text  {
+        padding: 2rem 0;
+    }
+
+    #partenaire .all_partners .shadow {
+        width: 48%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 650px)  {
+    #testimonial .avis_all > div {
+        flex-direction: column;
+        gap:2rem;
+    }
+    #testimonial .testi_text {
+        width: 100%;
+    }
+    #testimonial .testi_user {
+        width: 100%;
+    }
+    #testimonial .testi_user img {
+        width:70px;
+    }
+    #testimonial .avis_all > div:nth-child(2n) {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 560px)  {
+    #masthead .logo span{
+        display: none;
+    }
+    #partenaire .all_partners .shadow {
+        width: 100%;
+    }
+    #colophon .bigwrap {
+       flex-direction: column;gap: 2rem;
+    }
+}
