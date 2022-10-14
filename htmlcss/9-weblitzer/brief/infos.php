@@ -8,6 +8,7 @@
 // TYPO
 /////////////
 // Titillium+Web => Google font
+// font:400 18px/1.3 'Titillium Web', sans-serif;
 
 /////// COLOR
 // violetfonce =>  #87509c;
