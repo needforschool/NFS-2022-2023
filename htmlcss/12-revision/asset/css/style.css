@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'market_decoregular';
+    src: url('../font/market_deco-webfont.woff2') format('woff2'),
+    url('../font/market_deco-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 ul, ol {
     list-style: none;
 }
@@ -35,8 +43,11 @@ img {width: 100%;}
     font-size: 5vw;
     font-weight: bold;
     color:#fff;
-    position: absolute;top:3rem; left:1rem;right:1rem;
+    position: absolute;
+    top:50%; transform: translateY(-50%);
+    left:1rem;right:1rem;
     text-align: center;
+    font-family: 'market_decoregular';
 }
 
 
