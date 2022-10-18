@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+img {width: 100%;}
+
+.wrap {
+    width:100%;max-width: 1000px;margin:0 auto;
+    background-color: gainsboro;
+}
+.relative {
+    position: relative;
+}
+#intro {background-color: lime;}
+.boite1 {
+    width: 200px;height: 200px;
+    background-color: royalblue;
+}
+
+.boite2 {
+    width: 100px;height: 100px;
+    background-color: peru;
+    position: absolute;
+    bottom:-10px;right:-10px;
+}
+
+
+
+.text {
+    font-size: 5vw;
+    font-weight: bold;
+    color:#fff;
+    position: absolute;top:3rem; left:1rem;right:1rem;
+    text-align: center;
+}
+
+
+#projects {}
+#projects .container {display:flex;flex-wrap: wrap;justify-content: space-between;}
+#projects .item {height:100px;width:31%;margin-bottom: 1rem;}
+#projects .item1 {background-color: lime;}
+#projects .item2 {background-color: #4f805d;}
+#projects .item3 {background-color: #643a79;}
+#projects .item4 {background-color: #ef4f1d;}
+#projects .item5 {background-color: salmon;}
+#projects .item6 {background-color: cadetblue;}
+
+@media screen and (max-width: 800px) {
+    .text {
+        color:red;
+    }
+    #projects .item {width:48%;}
+}
+
+@media screen and (max-width: 600px) {
+    #projects .item {width:100%;}
+}
