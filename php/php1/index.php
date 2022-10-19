@@ -51,5 +51,54 @@ echo $tableaux[1]; ?>
     <li><?php echo $tableaux[1]; ?></li>
     <li><?php echo $tableaux[2]; ?></li>
 </ul>
+<?php
+// Commentaires sur une ligne
+/*  Commentaires */
+/*
+ * comment 1
+ * comment 2
+ *
+ */
+//////////////
+// DEBOGAGE
+//////////////
+// echo , print_r(), var_dump()
+var_dump($tableaux);
+// die('End of the script');
+// Type Errors
+    // Fatal => stop le script
+    // WARNING => script qui continue
+    // parse error => erreur de synthaxe
+    // E_NOTICE  => infos
+///////////////////
+// SUPER GLOBAL
+////////////////
+echo '<pre>';
+print_r($GLOBALS);
+echo '</pre>';
 
-
+echo '<pre>';
+print_r($_SERVER);
+echo '</pre>';
+/////////////////////
+// CONCATENATION  =>  .
+////////////////////////
+/// ?>
+<h3><?php echo $titre; ?></h3>
+<?php
+//echo '<h3>';
+//echo $titre;
+//echo '</h3>';
+echo '<h3>'.$titre.'</h3>';
+$html = '';
+$html .= '<h3>';
+$html .= $titre;
+$html .= '</h3>';
+echo $html;
+// exo
+$chaine = 'Salut';
+$chaine2 = 'Buzz';
+$data1 = 'Formation';
+$data2 = 'PHP';
+// Avec les 3 méthodes
+// <p class="para">Salut Buzz !, je suis en Formation PHP</p>
