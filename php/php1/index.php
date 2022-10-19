@@ -101,4 +101,111 @@ $chaine2 = 'Buzz';
 $data1 = 'Formation';
 $data2 = 'PHP';
 // Avec les 3 méthodes
-// <p class="para">Salut Buzz !, je suis en Formation PHP</p>
+// <p class="para">Salut Buzz !, je suis en Formation PHP.</p>
+// Méthode en alternance
+?>
+<p class="para"><?php echo $chaine; ?> <?php echo $chaine2; ?> ! je suis en <?= $data1; ?> <?= $data2; ?>.</p>
+<?php
+// méthode tout en PHP 1
+echo '<p class="para">' . $chaine . ' ' . $chaine2 . ' ! je suis en '.$data1.' ' . $data2 . '.</p>';
+// méthode tout en PHP 2
+$h = '<p class="para">';
+$h .= $chaine . ' ' . $chaine2;
+$h .= ' ! je suis en ';
+$h .= $data1;
+$h .= ' ';
+$h .= $data2;
+$h .= '.';
+$h .= '</p>';
+echo $h;
+// '' vs "" , echappement
+echo '<p class="dede">Bonjour Dede</p>';
+echo "<p class=\"dede\">Bonjour Dede</p>";
+
+echo 'Arnold a dit: I\'ll be back';
+echo "Arnold a dit: \"I'll be back\"";
+echo 'Arnold a dit: "I\'ll be back"';
+
+///
+$traitees = 'lu';
+$la = 'ici';
+echo '<p>Les variables sont $traitees $la</p>';
+echo '<p>Les variables sont '.$traitees.' $la</p>';
+echo "<p>Les variables sont $traitees $la</p>";
+
+/////////////////////////////
+/// Les conditions - if elseif else
+/////////////////////////////
+// SI / SINON SI / SINON
+
+if(true) {
+    echo 'yes';
+} else {
+    echo 'no';
+}
+$mot1 = 'musique';
+$mot2 = 'sport';
+$mot3 = 'musique';
+if($mot1 == $mot3) {
+    echo 'Les mots sont identiques';
+} elseif($mot1 != $mot3) {
+    echo 'Les mots sont différents';
+} else {
+    echo 'vous ne me verrez jamais';
+}
+echo $mot1 == $mot3; // true
+echo $mot1 == $mot2; // false
+
+$age = 44;
+if($age < 18) {
+    echo 'Je suis mineur';
+} else {
+    echo 'Je suis majeur';
+}
+// Conditions Ternaire
+$majeur = $age < 18 ? false : true;
+echo $majeur == true ? 'Je suis majeur' : 'Je suis mineur';
+
+// EXO
+// moins de 18 ans => mineur
+    // si moins de 18 et aussi moins de 6 => en maternelle
+// Sinon si plus de 65 ans => retraite
+// Sinon je suis un actif
+$age = 12;
+if($age < 18) {
+    echo 'Je suis mineur';
+    if($age <= 6) {
+        echo ' et en maternelle';
+    }
+} elseif($age > 65) {
+    echo 'Je suis à la retraite';
+} else {
+    echo 'Je suis actif';
+}
+// switch
+$i = 1;
+switch ($i) {
+    case 0:
+        echo 'i egale zéro';
+        break;
+    case 1:
+        echo 'i egale à 1';
+        break;
+    case 2:
+        echo 'i egale à 2';
+        break;
+    default:
+        echo 'i est plus grand que 2';
+        break;
+}
+
+
+
+
+
+
+
+
+
+
+
