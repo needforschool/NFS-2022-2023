@@ -31,7 +31,44 @@ echo '</pre>';
     // p class "content" => $content
     // ul class  "liste"
         // un li par fruit
+?>
+<section id="fruits">
+    <h2 class="title"><?php echo $title; ?></h2>
+    <p class="content"><?php echo $content; ?></p>
+    <ul>
+        <li><?php echo $fruits[0]; ?></li>
+        <li><?php echo $fruits[1]; ?></li>
+        <li><?php echo $fruits[2]; ?></li>
+        <li><?php echo $fruits[3]; ?></li>
+        <li><?php echo $fruits[4]; ?></li>
+    </ul>
+</section>
+<?php
+echo '<section id="fruits">
+    <h2 class="title">'.$title.'</h2>
+    <p class="content">'. $content.'</p>
+    <ul>
+        <li>'. $fruits[0].'</li>
+        <li>'. $fruits[1].'</li>
+        <li>'. $fruits[2].'</li>
+        <li>'. $fruits[3].'</li>
+        <li>'. $fruits[4].'</li>
+    </ul>
+</section>';
 
+$html = '';
+$html .= '<section id="fruits">';
+    $html .= '<h2>'.$title.'</h2>';
+    $html .= '<p>'.$content.'</p>';
+    $html .= '<ul>';
+        $html .= '<li>'. $fruits[0].'</li>';
+        $html .= '<li>'. $fruits[1].'</li>';
+        $html .= '<li>'. $fruits[2].'</li>';
+        $html .= '<li>'. $fruits[3].'</li>';
+        $html .= '<li>'. $fruits[4].'</li>';
+    $html .= '</ul>';
+$html .= '</section>';
+echo $html;
 
 
 
