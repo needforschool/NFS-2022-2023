@@ -212,6 +212,77 @@ switch ($i) {
 // $a <= $b, Inférieur ou égale
 // $a >= $b, Supérieur ou égale
 
+///////////////////////////////////////
+/// Les conditions - Opérateurs logiques
+///////////////////////////////////////
+/// ET => &&, AND
+/// OU => ||, OR
+/// ! => négation
+$homme = true;
+$age = 45;
+if($homme && $age > 18) {
+    echo 'Accès au site ok!';
+}
+$a = '42';
+$b = ($a === 42); // false
+if($a > 0 && !$b) { // true, true
+    echo 'Pomme';
+} elseif($b && $a <= 42) {  // false / true
+    echo 'Poire';
+} elseif(!$a || $b > 42) { // false, false
+    echo 'Abricot';
+}
+
+///////////////////////
+/// Arithmétique et incrémentation
+/////////////////////////
+// -$a, Négation => opposé de $a.
+// $a + $b  => Addition
+// $a - $b  => Soustraction
+// $a * $b  => Multiplication
+// $a ** $b => Exponentielle
+// $a / $b  => Division
+// $a % $b  => Modulo, Reste de la division
+    // echo 6 % 2;  // 0
+    // echo 7 % 2;  // 1
+    // echo 11 % 3;  // 2
+$chiffre = 14;
+if($chiffre % 2 == 0) {
+    echo 'chiffre pair';
+} else {
+    echo 'chiffre impair';
+}
+// Précédence
+$calcul = 4 + 6 * 2; // 16
+// Incrémentation & décrémentation
+$j = 1;
+// $j = $j + 1;
+$j++;
+$j++;
+echo $j; // 3
+$j--;
+echo $j; // 2
+// $j = $j + 5;
+$j+=5;
+echo $j; // 7
+$j-=3; // 4
+$j*=2; // 8
+$j/=4; // 2
+//////////////////////////////
+
+$x = 4;
+$x++; // 5
+echo 'Post incrémentation: ' . $x++; // 5
+echo $x; // 6;
+echo 'Pre incrémentation: ' . ++$x; // 7
+echo $x; // 7;
+
+
+
+
+
+
+
 
 
 
