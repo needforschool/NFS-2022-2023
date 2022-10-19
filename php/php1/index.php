@@ -33,6 +33,23 @@ $titre = 'Mon e-shop';
 $year = 2022;
 // FLOAT
 $pourcentage = 12.2;
-
+// BOOLEAN ( true, false )
+$jeSuisLeFormateur = true;
+$isLoveMacron = false;
+// NULL
+$pasDeValeur = NULL;
+// Types Composées
+// Tableaux, Objects
+$tableaux = array('Beau loft plein sud','Menagerie','Chalet dans montagne');
+//echo $tableaux;
+echo '<pre>';
+print_r($tableaux);
+echo '</pre>';
+echo $tableaux[1]; ?>
+<ul>
+    <li><?php echo $tableaux[0]; ?></li>
+    <li><?php echo $tableaux[1]; ?></li>
+    <li><?php echo $tableaux[2]; ?></li>
+</ul>
 
 
