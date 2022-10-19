@@ -198,8 +198,19 @@ switch ($i) {
         echo 'i est plus grand que 2';
         break;
 }
-
-
+/////////////////
+/// Les conditions => Opérateur de comparaison
+/////////////////
+// $a == $b, Egale, True si $a est égale à $b
+// $a === $b, Identique, True si $a est egale à $b et qu'ils sont du même type.
+    // 12 === '12' // false
+    // 12 == '12' // true
+// $a != $b, Différents
+// $a !== $b, Différent ou bien s'ils ne sont pas du même type
+// $a < $b, Strictement plus petit que
+// $a > $b, strictement plus grand que
+// $a <= $b, Inférieur ou égale
+// $a >= $b, Supérieur ou égale
 
 
 
