@@ -18,9 +18,19 @@ $html .= '<a href="'.$url.'" target="_blank">';
 $html .= '</a>';
 echo $html;
 
-
-
-
+// EXO 2
+$title = 'Les fruits de bernard';
+$content = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores dicta doloremque dolores ea eum ipsa magni omnis optio quaerat!';
+$fruits = array('Banane','Kiwi','Papaye','Tomate', 'Courgette');
+echo '<pre>';
+print_r($fruits);
+echo '</pre>';
+// 3 méthodes
+// section id => fruits
+    // h2 class "title"  => $titre
+    // p class "content" => $content
+    // ul class  "liste"
+        // un li par fruit
 
 
 
