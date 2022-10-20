@@ -72,5 +72,38 @@ for($i = 1; $i <= 50; $i++) {
     $color = ($i >= 36 && $i <= 47) ? 'green' : 'red';
     echo '<p style="color:'.$color.';">'.$i.'</p>';
 }
+//////////////////////////
+/// BOUCLES & TABLEAUX
+//////////////////////////
+$musiques = array('Basse','Guitare','Batterie','Piano','Percu','Xylophone','Voix');
+echo '<pre>';
+print_r($musiques);
+echo '</pre>';
+echo $musiques[2]; // Batterie
+echo count($musiques); // 6
+echo '<ul>';
+for($i = 0; $i < count($musiques );$i++) {
+    echo '<li>'.$musiques[$i].'</li>';
+}
+echo '</ul>';
+$fruits = array('Banane','Kiwi','Papaye','Tomate','Courgette','Litchi','Fruit du dragon');
+// section id fruits
+    // div par fruits  class fruit
+        // h2
+echo '<section id="fruits">';
+for($i = 0; $i < count($fruits);$i++) {
+    echo '<div class="fruit"><h2>'.$fruits[$i].'</h2></div>';
+}
+echo '</section>';
+?>
+<section id="fruits">
+    <?php for($i = 0; $i < count($fruits);$i++) { ?>
+        <div class="fruit">
+            <h2><?php echo $fruits[$i]; ?></h2>
+        </div>
+    <?php } ?>
+</section>
+
+
 
 
