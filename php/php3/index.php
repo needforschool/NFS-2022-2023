@@ -126,10 +126,32 @@ echo '</ul>';
 <?php
 $tiroirs = array('clef','monnaie','capote','piles','stylo 4 couleurs');
 // ul li  => for
+echo '<ul>';
+    for ($i = 0; $i < count($tiroirs);$i++) {
+        echo '<li>'. $tiroirs[$i] .'</li>';
+    }
+echo '</ul>';
 // ul li  => foreach
+echo '<ul>';
+    foreach($tiroirs as $tiroir) {
+        echo '<li>'.$tiroir.'</li>';
+    }
+echo '</ul>';
 // ul li  => for  => méthode en alternance
+?>
+<ul>
+    <?php for($i = 0; $i < count($tiroirs);$i++) { ?>
+        <li><?= $tiroirs[$i]; ?></li>
+    <?php } ?>
+</ul>
+<?php
 // ul li  => foreach => méthode en alternance
-
+?>
+<ul>
+    <?php foreach ($tiroirs as $tiroir) { ?>
+        <li><?= $tiroir; ?></li>
+    <?php } ?>
+</ul>
 
 
 
