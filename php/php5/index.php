@@ -22,3 +22,9 @@ $arrayDeOuf = array(
     )
     )
 );
+
+echo '<pre>';
+print_r($arrayDeOuf);
+echo '</pre>';
+
+echo $arrayDeOuf[2]['sdfsd'][2390]['dede'];
