@@ -51,6 +51,26 @@ for($i = 19; $i <= 67; $i++) {
 }
 echo '<hr>';
 // Affichez les années depuis votre année de naissance jusqu'à aujourd'hui. Mettre chaque année dans un p avec la class "year"
-echo date('Y');
+for($i = 1978; $i <= date('Y'); $i++) {
+    echo '<p class="year">'.$i.'</p>';
+}
+echo '<hr>';
 // Affichez les nombres de 50 à 25 par ordre décroissant, sauf le 30
-// Affichez les nombres de 1 à 50. Les nombres de 36 à 47 doivent être en vert
+for($i = 50; $i >=25; $i--) {
+    if($i != 30) {
+        echo $i;
+    }
+}
+echo '<hr>';
+// Affichez les nombres de 1 à 50. Les nombres de 36 à 47 doivent être en vert, les autres en Rouge
+for($i = 1; $i <= 50; $i++) {
+//    if($i >= 36 && $i <= 47) {
+//       $color = 'green';
+//    } else {
+//       $color = 'red';
+//    }
+    $color = ($i >= 36 && $i <= 47) ? 'green' : 'red';
+    echo '<p style="color:'.$color.';">'.$i.'</p>';
+}
+
+
