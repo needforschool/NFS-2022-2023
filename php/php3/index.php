@@ -104,6 +104,40 @@ echo '</section>';
     <?php } ?>
 </section>
 
+<?php
+// foreach
+foreach($fruits as $fruit) {
+    echo $fruit;
+}
+// $musiques => ul li => grâce à foreach
+        // avec les 2 méthodes
+echo '<ul>';
+foreach($musiques as $instrument) {
+    echo '<li>'.$instrument.'</li>';
+}
+echo '</ul>';
+?>
+<ul>
+    <?php foreach($musiques as $instrument) { ?>
+        <li><?= $instrument; ?></li>
+    <?php } ?>
+</ul>
+
+<?php
+$tiroirs = array('clef','monnaie','capote','piles','stylo 4 couleurs');
+// ul li  => for
+// ul li  => foreach
+// ul li  => for  => méthode en alternance
+// ul li  => foreach => méthode en alternance
+
+
+
+
+
+
+
+
+
 
 
 
