@@ -3,4 +3,9 @@
     box-sizing: border-box;
 }
 
+.wrap {max-width: 500px; width: 100%;margin:  0 auto;}
 label {display: block;}
+input {width: 100%;padding: 1rem;}
+.error {color:red;}
+.success {color:green;
+    font-size: 4rem;text-align: center}

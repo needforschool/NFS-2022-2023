@@ -38,6 +38,7 @@ if(!empty($_POST['submitted2'])) {
 }
 
 $errors = array();
+$success = false;
 // Soumis
 // if formulaire est soumis ??
 if(!empty($_POST['submitted'])) {
@@ -46,20 +47,37 @@ if(!empty($_POST['submitted'])) {
     $prenom = trim(strip_tags($_POST['prenom']));
     // Validation
     // Validation champ $nom
-    // n'est pas vide
-        // mb_strlen
-        // Si $nbre < 3
-            //$errors['nom'] = 'Veuillez renseigner au moins 3 caractère';
-        // SINON Si $nbre > 70
+    if(!empty($nom)) {
+        if(mb_strlen($nom) < 3) {
+            $errors['nom'] = 'Veuillez renseigner plus de 3 caractères';
+        } elseif(mb_strlen($nom) > 70) {
+            $errors['nom'] = 'Veuillez renseigner moins de 70 caractères';
+        }
+    } else {
+        $errors['nom'] = 'Veuillez renseigner ce champ';
+    }
+    // Validation prénom
+    if(!empty($prenom)) {
+        if(mb_strlen($prenom) < 5) {
+            $errors['prenom'] = 'Veuillez renseigner plus de 5 caractères';
+        } elseif(mb_strlen($prenom) > 100) {
+            $errors['prenom'] = 'Veuillez renseigner moins de 100 caractères';
+        }
+    } else {
+        $errors['prenom'] = 'Veuillez renseigner un prénom';
+    }
+    // email
+    // color
 
-        // else
-            //no error
-    // vide
-        //$errors['nom'] = 'Veuillez renseigner ce champ';
+    // NO ERRORS  => $errors vide
+    if(count($errors) == 0) {
+        // Insert into => BDD
+        // envoyer un email
+            // etc....
+        $success = true;
+        // redirection
 
-    //$errors['nom'] = 'Veuillez renseigner ce champ';
-    //$errors['prenom'] = 'Veuillez renseigner ce champ';
-
+    }
 
 }
 echo '$errors';
@@ -70,17 +88,22 @@ echo '</pre>';
 include('inc/header.php'); ?>
 
 <section>
-    <form action="" method="post">
-        <label for="nom">Nom * (min 3, max 70)</label>
-        <input type="text" id="nom" name="nom" value="<?php if(!empty($_POST['nom'])) { echo $_POST['nom']; } ?>">
-        <span class="error"><?php if(!empty($errors['nom'])) { echo $errors['nom']; } ?></span>
+    <?php if($success) { ?>
+        <p class="success">Merci pour tout</p>
+    <?php } else { ?>
+        <form action="" method="post" class="wrap">
+            <label for="nom">Nom * (min 3, max 70)</label>
+            <input type="text" id="nom" name="nom" value="<?php if(!empty($_POST['nom'])) { echo $_POST['nom']; } ?>">
+            <span class="error"><?php if(!empty($errors['nom'])) { echo $errors['nom']; } ?></span>
 
-        <label for="prenom">Prénom * (min 5, max 100)</label>
-        <input type="text" id="prenom" name="prenom" value="<?php if(!empty($_POST['prenom'])) { echo $_POST['prenom']; } ?>">
-        <span class="error"><?php if(!empty($errors['prenom'])) { echo $errors['prenom']; } ?></span>
+            <label for="prenom">Prénom * (min 5, max 100)</label>
+            <input type="text" id="prenom" name="prenom" value="<?php if(!empty($_POST['prenom'])) { echo $_POST['prenom']; } ?>">
+            <span class="error"><?php if(!empty($errors['prenom'])) { echo $errors['prenom']; } ?></span>
 
-        <input type="submit" name="submitted" value="Envoyer">
-    </form>
+            <input type="submit" name="submitted" value="Envoyer">
+        </form>
+    <?php } ?>
+
 
     <form action="" method="post">
         <input type="submit" name="submitted2" value="Envoyer">
