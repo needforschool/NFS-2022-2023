@@ -10,10 +10,10 @@ $title = 'Mon site - Page home';
 //echo '<pre>';
 //print_r($_GET);
 //echo '</pre>';
-echo '$_POST';
-echo '<pre>';
-print_r($_POST);
-echo '</pre>';
+//echo '$_POST';
+//echo '<pre>';
+//print_r($_POST);
+//echo '</pre>';
 //if(!empty($_GET['nom'])) {
 //    $nom = $_GET['nom'] . ' ';
 //    echo $nom;
@@ -80,13 +80,12 @@ if(!empty($_POST['submitted'])) {
     }
 
 }
-echo '$errors';
-echo '<pre>';
-print_r($errors);
-echo '</pre>';
+//echo '$errors';
+//echo '<pre>';
+//print_r($errors);
+//echo '</pre>';
 
 include('inc/header.php'); ?>
-
 <section>
     <?php if($success) { ?>
         <p class="success">Merci pour tout</p>
@@ -103,11 +102,11 @@ include('inc/header.php'); ?>
             <input type="submit" name="submitted" value="Envoyer">
         </form>
     <?php } ?>
-
-
-    <form action="" method="post">
-        <input type="submit" name="submitted2" value="Envoyer">
-    </form>
+    <div class="wrap">
+        <h2>Deuxième formulaire</h2>
+        <form action="" method="post">
+            <input type="submit" name="submitted2" value="Envoyer">
+        </form>
+    </div>
 </section>
-
 <?php include('inc/footer.php');

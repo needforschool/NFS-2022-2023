@@ -2,10 +2,10 @@
     margin: 0;padding: 0;
     box-sizing: border-box;
 }
-
+ul, ol {list-style: none;}
 .wrap {max-width: 500px; width: 100%;margin:  0 auto;}
-label {display: block;}
-input {width: 100%;padding: 1rem;}
-.error {color:red;}
-.success {color:green;
-    font-size: 4rem;text-align: center}
+label {display: block;font-weight: bold;}
+input,textarea,select {width: 100%;padding: 1rem;}
+textarea {height: 120px; resize: vertical;}
+.error {color:red;font-size: .7rem;}
+.success {color:green;font-size: 3rem;text-align: center;}
