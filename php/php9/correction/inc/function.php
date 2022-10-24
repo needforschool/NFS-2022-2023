@@ -11,3 +11,14 @@ function poster($film) {
     echo '<img src="https://formation.weblitzer.fr/posters/'. $film['id'].'.jpg" alt="'.$film['title'].'">';
 }
 
+
+function paginationMovie($index, $movies) {
+    $keyPrecedent = $index - 1;
+    if($index > 0) {
+        echo '<a href="details.php?id='. $movies[$keyPrecedent]['id'].'">Précédent</a>';
+    }
+    $keySuivant = $index + 1;
+    if($index < count($movies) - 1) {
+        echo '<a href="details.php?id='. $movies[$keySuivant]['id'].'">Suivant</a>';
+    }
+}

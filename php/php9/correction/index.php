@@ -10,7 +10,9 @@ include('inc/header.php'); ?>
     <?php foreach($movies as $movie) { ?>
         <div class="movie">
             <h2><?php echo $movie['title']; ?></h2>
-            <?php poster($movie); ?>
+            <a href="details.php?id=<?= $movie['id']; ?>">
+                <?php poster($movie); ?>
+            </a>
         </div>
     <?php } ?>
     </section>

@@ -17,3 +17,5 @@ img {
 #films .movie {
     width: 24%;
 }
+
+.onemovie {display: flex;gap:2rem;}
