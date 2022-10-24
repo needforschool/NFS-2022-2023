@@ -5,7 +5,9 @@ require('inc/data.php');
 if(!empty($_GET['id']) && is_numeric($_GET['id'])) {
     $id = $_GET['id'];
     // request BDD
-    // ATTENTION
+    ///// WARNING
+    // ATTENTION NE PAS REPRODUIRE LA MEME CHOSE QUAND VOUS ALLEZ CONNAITRE LES REQUEST A LA BDD
+    ///// WARNING
     $goodFilm = array();
     foreach ($movies as $key => $movie) {
         if($id === $movie['id']) {
