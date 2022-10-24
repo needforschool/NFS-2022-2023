@@ -53,7 +53,23 @@ $plats = array('Tartiflette', 'pot au feu', ' mousse au chocolat', ' blanquette'
 $defaults = array('avare','paresseux','ennuyant','borné','cruel','versatile','ringard','stupide','superficiel','egoiste');
 // array_rand
 // créez un fonction 'generateGroupName'
-    // Prendre au hasrad un element du premier tableau et du deuxieme tableau
+    // Prendre au hasard un element du premier tableau et du deuxieme tableau
     // former un phrase " Tartiflette frustrée"
-    // div => ecrit en rose , chaque mot doit commencer une majuscule
-
+    // div => ecrit en rose , chaque mot doit commencer une majuscule.
+echo '<hr>';
+$fruits = array('Banane', 'Kiwi', 'Papaye');
+function generateGroupName($tableau1,$tableau2,$color = 'pink',$balise = 'p')
+{
+//    $random_index1 = array_rand($tableau1);
+//    $ele = $tableau1[$random_index1];
+//    $random_index2 = array_rand($tableau2);
+//    $ele2 = $tableau2[$random_index2];
+//    $str = $ele . ' ' . $ele2;
+//    echo '<p style="color:pink;">' . ucwords($str) . '</p>';
+    $str = $tableau1[array_rand($tableau1)] . ' ' .$tableau2[array_rand($tableau2)];
+    echo '<'.$balise.' style="color:'.$color.';">'.ucwords($str).' </'.$balise.'>';
+}
+generateGroupName($plats,$defaults);
+generateGroupName($fruits,$defaults, 'green');
+generateGroupName($fruits,$defaults, 'red', 'h2');
+echo '<hr>';
