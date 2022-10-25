@@ -11,7 +11,6 @@ function poster($film) {
     echo '<img src="https://formation.weblitzer.fr/posters/'. $film['id'].'.jpg" alt="'.$film['title'].'">';
 }
 
-
 function paginationMovie($index, $movies) {
     $keyPrecedent = $index - 1;
     if($index > 0) {
