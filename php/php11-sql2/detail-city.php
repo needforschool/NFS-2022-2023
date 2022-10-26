@@ -4,9 +4,9 @@ require('inc/fonction.php');
 
 if(!empty($_GET['id']) && is_numeric($_GET['id'])) {
     $id = $_GET['id'];
-    $sql = "SELECT * FROM city WHERE ID = $id";
+    $sql = "SELECT * FROM city WHERE ID = :id";
     $query = $pdo->prepare($sql);
-    // INJECTION SQL     =>  PROBLEME
+    $query->bindValue('id',$id, PDO::PARAM_INT);
     $query->execute();
     $ville = $query->fetch();
     // debug($ville);

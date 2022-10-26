@@ -1,0 +1,13 @@
+* {
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+ul, ol {list-style: none;}
+.wrap {max-width: 500px; width: 100%;margin:  0 auto;}
+label {display: block;font-weight: bold;margin-top: .5rem;}
+input,textarea,select {width: 100%;padding: 1rem;}
+textarea {height: 120px; resize: vertical;}
+.error {color:red;font-size: .9rem;}
+.success {color:green;font-size: 3rem;text-align: center;}
+input[type=submit] {margin-top: 1rem;border-radius:5px;cursor:pointer;border:none;transition: all .4s;}
+input[type=submit]:hover {background-color: green;color:#fff;}
