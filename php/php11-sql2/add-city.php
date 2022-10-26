@@ -7,12 +7,36 @@ $errors = array();
 // if formulaire soumit
 if(!empty($_POST['submitted'])) {
     // Faille xss
-
-        // Validations
-
-        // if no error
+    $nom = cleanXss('nom');
+    $code = cleanXss('code');
+    $district = cleanXss('district');
+    $pop = cleanXss('pop');
+    // Validations
+    $errors = validationText($errors,$nom,'nom',2,35);
+    $errors = validationText($errors,$code,'code',3,3);
+    $errors = validationText($errors,$district,'district',3,20);
+    // Validation population
+    if(!empty($pop)) {
+        if(ctype_digit($pop)) {
+            if($pop < 1 || $pop > 99999999999) {
+                $errors['pop'] = 'Veuillez renseigner un nombre moins grand';
+            }
+        } else {
+            $errors['pop'] = 'Veuillez renseigner un entier';
+        }
+    } else {
+        $errors['pop'] = 'Veuillez renseigner une population';
+    }
+    // if no error
+    if(count($errors) == 0) {
         // INSERT INTO new city
+        $sql = "INSERT INTO city ()
+                VALUES ()";
+        $query = $pdo->prepare($sql);
+        $query->bindValue(); // x4
+        $query->execute();
 
+    }
 }
 
 debug($errors);
@@ -35,7 +59,7 @@ include('inc/header.php'); ?>
         <span class="error"><?php if(!empty($errors['district'])) {echo $errors['district'];} ?></span>
 
         <label for="pop">Population</label>
-        <input type="number" id="pop" name="pop" value="<?php if(!empty($_POST['pop'])) {echo $_POST['pop'];} ?>">
+        <input type="text" id="pop" name="pop" value="<?php if(!empty($_POST['pop'])) {echo $_POST['pop'];} ?>">
         <span class="error"><?php if(!empty($errors['pop'])) {echo $errors['pop'];} ?></span>
 
         <input type="submit" name="submitted" value="Ajouter une ville">
