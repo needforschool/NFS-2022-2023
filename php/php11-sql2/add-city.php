@@ -2,6 +2,7 @@
 require('inc/pdo.php');
 require('inc/fonction.php');
 $errors = array();
+$success = false;
 //nom, code,district, pop
 
 // if formulaire soumit
@@ -30,17 +31,23 @@ if(!empty($_POST['submitted'])) {
     // if no error
     if(count($errors) == 0) {
         // INSERT INTO new city
-        $sql = "INSERT INTO city ()
-                VALUES ()";
+        $sql = "INSERT INTO city (Name,CountryCode, District, Population )
+                VALUES (:nom,:code,:dis,:pop)";
         $query = $pdo->prepare($sql);
-        $query->bindValue(); // x4
+        $query->bindValue('nom', $nom);
+        $query->bindValue('code', mb_strtoupper($code));
+        $query->bindValue('dis', $district);
+        $query->bindValue('pop', $pop);
         $query->execute();
-
+        $success = true;
+        //header('Location: index.php');
+        $newId = $pdo->lastInsertId();
+        header('Location: detail-city.php?id=' . $newId);
     }
 }
 
-debug($errors);
-debug($_POST);
+//debug($errors);
+//debug($_POST);
 
 include('inc/header.php'); ?>
     <h1>Ajouter une ville</h1>
