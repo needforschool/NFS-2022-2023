@@ -12,6 +12,7 @@
 <header>
     <nav>
         <ul>
+            <li><a href="index.php">Home</a></li>
             <li><a href="add-city.php">Ajouter une ville</a></li>
         </ul>
     </nav>
