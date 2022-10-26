@@ -20,9 +20,17 @@ function validationText($err,$data,$keyError,$min,$max)
     return $err;
 }
 
-
-
 function cleanXss($key)
 {
     return trim(strip_tags($_POST[$key]));
+}
+
+
+function getCityById($id){
+    global $pdo;
+    $sql = "SELECT * FROM city WHERE ID = :id";
+    $query = $pdo->prepare($sql);
+    $query->bindValue('id',$id, PDO::PARAM_INT);
+    $query->execute();
+    return $query->fetch();
 }

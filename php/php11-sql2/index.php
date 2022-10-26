@@ -19,6 +19,7 @@ include('inc/header.php'); ?>
                 <p>Population: <?php echo $ville['Population']; ?></p>
                 <p><a href="detail-city.php?id=<?php echo $ville['ID']; ?>">Voir plus</a></p>
                 <p><a href="edit-city.php?id=<?php echo $ville['ID']; ?>">Editer la ville</a></p>
+                <p><a href="delete-city.php?id=<?php echo $ville['ID']; ?>">Effacer la ville</a></p>
             </div>
         <?php } ?>
     </section>
