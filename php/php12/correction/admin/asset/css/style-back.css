@@ -15,5 +15,27 @@ input[type=submit]:hover {background-color: green;color:#fff;}
 
 
 body {
-    background-color: red;
+    background-color: gainsboro;
+}
+
+#masthed {
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: burlywood;color:#fff;
+}
+#colophon {
+    margin-top: 2rem;
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: burlywood;color:#fff;
+}
+
+table {
+    width: 100%;
+}
+table ul {display: flex;gap:2rem;}
+th, td {
+    border: 1px solid;
+    padding: .3rem;
 }

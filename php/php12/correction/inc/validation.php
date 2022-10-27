@@ -20,3 +20,18 @@ function validationText($err,$data,$keyError,$min,$max)
     return $err;
 }
 
+function viewError($errors,$key)
+{
+    if(!empty($errors[$key])) {
+        echo $errors[$key];
+    }
+}
+
+function getPostValue($key, $data = '')
+{
+    if(!empty($_POST[$key]) ) {
+        echo $_POST[$key];
+    } elseif(!empty($data)) {
+        echo $data;
+    }
+}

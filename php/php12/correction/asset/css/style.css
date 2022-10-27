@@ -15,5 +15,17 @@ input[type=submit]:hover {background-color: green;color:#fff;}
 
 
 body {
-    background-color: lime;
+    background-color: grey;
+}
+#masthed {
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: #000;color:#fff;
+}
+#colophon {
+    margin-top: 2rem;
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #000;color:#fff;
 }

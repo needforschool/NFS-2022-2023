@@ -9,11 +9,13 @@
 </head>
 <body>
 
-<header>
+<header id="masthed">
 
     <nav>
         <ul>
             <li><a href="../index.php">Front</a></li>
+            <li><a href="index.php">Dashboard</a></li>
+            <li><a href="newpost.php">Ajouter article</a></li>
         </ul>
     </nav>
 </header>

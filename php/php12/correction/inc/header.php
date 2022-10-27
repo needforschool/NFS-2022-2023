@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="asset/css/style.css">
 </head>
 <body>
-<header>
+<header id="masthed">
     <nav>
         <ul>
             <li><a href="index.php">Home</a></li>
+            <li><a href="blog.php">Blog</a></li>
             <li><a href="admin/index.php">Admin</a></li>
         </ul>
     </nav>

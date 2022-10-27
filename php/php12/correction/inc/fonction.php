@@ -6,3 +6,10 @@ function debug($tableau) {
     print_r($tableau);
     echo '</pre>';
 }
+
+
+function redirectNotFound()
+{
+    header("HTTP/1.0 404 Not Found");
+    header('Location: 404.php');
+}
