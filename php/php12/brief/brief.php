@@ -15,6 +15,7 @@
 -   modérer des commentaires;
 -   supprimer des commentaires;
 */
+
 // Il n’y a pas de droit spécifique pour la lecture d’un article ou d’un commentaire.
 // Vous devrez créer un back-office, mais qui auras un design différents et un header avec des liens différents.
 // C'est dans le back-office que vous pouvez créer/modifier/supprimer un article.
@@ -26,8 +27,9 @@
 //======================================================================
 
 // blog_users ( id, pseudo, email, password, created_at, role, token)
-// blog_articles (id, title(255), content(text), user_id, created_at, modified_at, status, image(null))
-// blog_comments (id, id_article, content(text), user_id, created_at(datetime), modified_at, status(varchar 20))
+
+// blog_articles (id, title(255), content(text), auteur, created_at, modified_at, status, image(null))
+// blog_comments (id, id_article, content(text), auteur, created_at(datetime), modified_at, status(varchar 20))
 
 // Exemple de status 'draft', 'new','publish'
 
