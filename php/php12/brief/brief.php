@@ -31,7 +31,7 @@
 // blog_articles (id, title(255), content(text), auteur, created_at, modified_at, status, image(null))
 // blog_comments (id, id_article, content(text), auteur, created_at(datetime), modified_at, status(varchar 20))
 
-// Exemple de status 'draft', 'new','publish'
+// Exemple de status 'draft', 'new', 'publish'
 
 //======================================================================
 // Etape 1 bis: Création d'un back-office, Création front-office
@@ -56,7 +56,7 @@
 // Cette étape comprend le développement du formulaire en HTML et l’update des informations en base de données.
 
 //======================================================================
-// Etape 4: Lister les articles créés sur la page d'accueil (Front)
+// Etape 4: Lister les articles créés sur la page blog (Front)
 //======================================================================
 
 // Création fichier blog.php
