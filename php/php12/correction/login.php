@@ -5,10 +5,23 @@ require('inc/request.php');
 require('inc/validation.php');
 $errors = [];
 
-//                //  Pseudo or email
-//                // password
+if(!empty($_POST['submitted'])) {
+    $login = cleanXss('login');
+    $password = cleanXss('password');
+    // verification si un user existe avec ce mail ou ce pseudo =>  SELECT  fetch()
+        // s'il existe user
+            // debug($user);
+            // password_verify
+                // true
+                    // Connexion
+                // false
+                    // $error login => 'Credential'
+        // Si user existe pas
+            // $error login => 'Credential'
 
-//                // submit
+}
+
+
 include('inc/header.php'); ?>
     <h2>Connexion</h2>
     <form action="" method="post" novalidate class="wrapform">
