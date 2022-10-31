@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('inc/pdo.php');
 require('inc/fonction.php');
 require('inc/request.php');
@@ -9,15 +10,29 @@ if(!empty($_POST['submitted'])) {
     $login = cleanXss('login');
     $password = cleanXss('password');
     // verification si un user existe avec ce mail ou ce pseudo =>  SELECT  fetch()
-        // s'il existe user
-            // debug($user);
-            // password_verify
-                // true
-                    // Connexion
-                // false
-                    // $error login => 'Credential'
-        // Si user existe pas
-            // $error login => 'Credential'
+    $sql = "SELECT * FROM blog_users WHERE pseudo = :log OR email = :log";
+    $query = $pdo->prepare($sql);
+    $query->bindValue('log',$login, PDO::PARAM_STR);
+    $query->execute();
+    $user = $query->fetch();
+    //debug($user);
+    if(!empty($user)) {
+        if(password_verify($password,$user['password'] )) {
+            // CONNEXION  =>  S_SESSION
+            $_SESSION['user'] = array(
+                'id'     => $user['id'],
+                'pseudo' => $user['pseudo'],
+                'email'  => $user['email'],
+                'role'   => $user['role'],
+                'ip'     => $_SERVER['REMOTE_ADDR']
+            );
+            header('Location: index.php');
+        } else {
+            $errors['login'] = 'Credentials';
+        }
+    } else {
+        $errors['login'] = 'Credentials';
+    }
 
 }
 
