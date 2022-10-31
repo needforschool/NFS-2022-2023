@@ -20,6 +20,18 @@ function validationText($err,$data,$keyError,$min,$max)
     return $err;
 }
 
+function validationEmail($errors,$email,$entry = 'email')
+{
+    if (!empty($email)) {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $errors[$entry] = 'L\'email n\'est pas valide';
+        }
+    } else {
+        $errors[$entry] = 'Ce champ est obligatoire';
+    }
+    return $errors;
+}
+
 function viewError($errors,$key)
 {
     if(!empty($errors[$key])) {
