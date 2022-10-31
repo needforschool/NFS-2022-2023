@@ -17,10 +17,14 @@ if(!empty($_POST['submitted'])) {
     $errors = validationText($errors, $pseudo, 'pseudo', 3, 140);
     // pseudo unique.
     if(empty($errors['pseudo'])) {
-        $sql = "";
-        // Ecrire la request qui va chercher le pseudo, si user exist dans bdd => $errors['pseudo'] = 'Pseudo déjà pris';
-        // Attention au INJECTION SQL
-
+        $sql = "SELECT pseudo FROM blog_users WHERE pseudo = :pseudo";
+        $query = $pdo->prepare($sql);
+        $query->bindValue('pseudo', $pseudo, PDO::PARAM_STR);
+        $query->execute();
+        $verifPseudo = $query->fetch();
+        if(!empty($verifPseudo)) {
+            $errors['pseudo'] = 'Pseudo déjà pris';
+        }
     }
 }
 debug($_POST);
