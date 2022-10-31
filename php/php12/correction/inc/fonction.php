@@ -44,3 +44,31 @@ function isLogged() {
     }
     return false;
 }
+
+function isAdmin() {
+    if(isLogged()) {
+        if($_SESSION['user']['role'] == 'admin') {
+            return true;
+        }
+    }
+    return false;
+}
+
+
+//function dede($str = 'lulu')
+//{
+//    return 'dede ' . $str;
+//}
+//
+//$de = dede('bonjour');
+//$da = dede('hello');
+//$da = dede();
+//
+//function isOk()
+//{
+//    return false;
+//}
+//
+//if(!isOk()) {
+//
+//}

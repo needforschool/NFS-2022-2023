@@ -1,8 +1,14 @@
 <?php
+session_start();
+
 require('../inc/pdo.php');
 require('../inc/fonction.php');
 require('../inc/request.php');
 require('../inc/validation.php');
+
+if(!isAdmin()) {
+    header('Location: ../403.php');
+}
 
 $errors = array();
 $success = false;

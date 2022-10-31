@@ -27,7 +27,7 @@ include('inc/header.php'); ?>
             <p class="created_at">Publié le: <?php echo date('d/m/Y',strtotime($article['created_at'])) ?></p>
             <?php if(!empty($article['modified_at'])) {
                 echo '<p class="created_at">Modifié le:'.date('d/m/Y',strtotime($article['modified_at'])).'</p>';
-            }?>
+            } ?>
         </div>
     </section>
 <?php include('inc/footer.php');

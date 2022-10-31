@@ -15,6 +15,9 @@ include('inc/header.php'); ?>
         <p>Auteur: <?= $article['auteur']; ?></p>
         <a href="single.php?id=<?= $article['id']; ?>">Voir détail</a>
     </div>
+
+
+
 <?php } ?>
 
 <?php include('inc/footer.php');

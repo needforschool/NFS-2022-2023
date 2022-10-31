@@ -13,18 +13,16 @@
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="blog.php">Blog</a></li>
-            <li><a href="admin/index.php">Admin</a></li>
+            <?php if(isAdmin()) { ?>
+                <li><a href="admin/index.php">Admin</a></li>
+            <?php } ?>
 
-
-
-
-
-            <li><a href="register.php">Inscription</a></li>
-            <li><a href="login.php">Connexion</a></li>
-
-
-            <li><a href="logout.php">Déconnexion</a></li>
-
+            <?php if(!isLogged()) { ?>
+                <li><a href="register.php">Inscription</a></li>
+                <li><a href="login.php">Connexion</a></li>
+            <?php } else { ?>
+                <li><a href="logout.php">Déconnexion</a></li>
+            <?php } ?>
 
         </ul>
     </nav>

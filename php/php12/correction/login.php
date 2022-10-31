@@ -4,6 +4,10 @@ require('inc/pdo.php');
 require('inc/fonction.php');
 require('inc/request.php');
 require('inc/validation.php');
+
+if( isLogged() ) {
+    header('Location: index.php');
+}
 $errors = [];
 
 if(!empty($_POST['submitted'])) {

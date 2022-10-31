@@ -1,9 +1,15 @@
 <?php
+
+session_start();
+
 require('../inc/pdo.php');
 require('../inc/fonction.php');
 require('../inc/request.php');
 require('../inc/validation.php');
 
+if(!isAdmin()) {
+    header('Location: ../403.php');
+}
 
 if(!empty($_GET['id']) && is_numeric($_GET['id'])) {
     $id = $_GET['id'];
