@@ -12,6 +12,7 @@
     <nav>
         <ul>
             <li><a href="index.php">Home</a></li>
+            <li><a href="register.php">Inscription</a></li>
             <li><a href="blog.php">Blog</a></li>
             <li><a href="admin/index.php">Admin</a></li>
         </ul>
