@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS 3 - Base</title>
+</head>
+<body>
+
+<script>
+    // Declaration de variable
+    var dede;
+    console.log(dede); // undefined
+    // PRIMITIF
+    var prenom = 'Antoine'; // STRING
+    console.log(prenom);
+    var num = 1245; // Number
+    var num2 = 12.45; // Number
+    console.log({num,num2});
+    var isFormateur = true; // Boolean
+    console.log(!isFormateur);
+    // OBJET
+    // Tableau
+    console.time()
+    var tableau = ['Banane','Kiwi','Papaye'];
+    console.table(tableau);
+    console.info(tableau[1]); // Kiwi
+    console.warn(tableau[2]); // Papaye
+    console.error(tableau[2]);
+    console.timeEnd();
+    console.log('%c Javascript', 'color:lime;font-size:40px');
+    console.log('%c JavaScript!!', 'font-weight: bold; font-size: 50px;color: red; text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) , 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , 18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113)');
+    // Objet
+    var user = {
+        name: 'Antoine',
+        age: 44,
+        nom: 'Quidel'
+    };
+    console.log(user);
+    console.log(user['name']); // 'Antoine'
+    console.log(user.name);// 'Antoine'
+    console.log(user.age);// 44
+
+    // Nommage des variables
+    var nom = 'Bernard';
+    var noM = 'Jacky'; // nom de variable sont sensible à la case
+    // var Nom = // INtredit de commencer par une majuscule
+    var date_naissance;
+    var dateNaissanceDuDebutDeLaVie; // LowerCamelCase
+
+    // Mots réservés
+    // var, let , const, for, break, case, char, continue, delete, double, final, new, public, super, class, document
+
+    // Modifier la valeur d'une variable
+    prenom = 'Michel'
+    console.log(prenom);
+    // Modifier la valeur et le type
+    var dada = 1; // Number
+    dada = 'Une nouvelle chaine de caractère';
+    console.log(dada);
+
+    ///////////////////////
+    // var , let, const
+    //////////////////////
+    // const ne peut pas être modifié
+    const fruit = 'Banane';
+    // fruit = 'Kiwi'
+    // let
+    let legume = 'Courgettes';
+    legume = 'Tomates';
+    console.log(legume);
+    if(true) {
+        var test1 = 'dede with var'
+    }
+    console.log(test1);
+    let rara = 'dodo';
+    if(true) {
+        let test2 = 'dede with let';
+        console.log(rara);
+    }
+    // console.log(test2); // ERROR
+// https://fr.javascript.info/var
+    const instrument = {
+        title: 'Basse',
+        corde: 4
+    };
+    // instrument = {nom: 'Guitare'}
+    instrument.title = 'Guitare'
+    instrument.corde = 6;
+
+    // * En JavaScript il y a deux ensembles de types : les primitifs et les objets.
+    //> Les primitifs sont passés par valeur alors que les objets sont passés par référence.
+
+    //> les primitifs sont comparés par valeur alors que les objets sont comparés par référence.
+    console.log('dede' == 'dede'); // true
+    console.log({} == {}); // false
+
+    //////////////////////////
+    // PRIMITIVES
+    /////////////////////////////
+    // Boolean
+    console.log(typeof true); // boolean
+    // Number, BigInt
+    console.log(typeof 158); // Number
+    // String
+    console.log(typeof 'Hello le monde');
+    // null
+    console.log(typeof null); // object
+    // undefined
+    let pasdefini;
+    console.log(pasdefini); // undefined
+    // Les primitifs sont passés par valeur
+    // les primitifs sont comparé par valeur
+    //////////////////////////
+    // Object , non primitifs
+    /////////////////////////////
+    // les objets sont passés par référence
+    // les objets sont comparés par référence
+    // Tableau (array), *
+    // object litteraux *
+    // Map, Set, Weakmaps
+    // fonction *
+    // date *
+    // donnée structuré => xml , json *
+    // Promise, AsyncFunction *
+
+    let calcul = 2 * 5 + 4;
+    // précédence
+    // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+    // incrementer, décrementer & opérateur d'affections
+    let tata = 12;
+    tata += 12; // tata = tata + 12;
+    console.log(tata); // 24
+    tata -= 6; // tata = tata - 6;
+    console.log(tata); // 18
+    tata++; // incrémentation
+    console.log(tata) // 19
+    tata--; // décrémentation
+    console.log(tata); // 18
+
+    // Opérateurs arithmétiques
+    // addition (+), soustraction (-), division (/), multiplication (*), modulo (%)
+    const chiffre1 = 25;
+    const chiffre2 = 13;
+    console.log(chiffre1 + chiffre2); // 38
+    console.log(chiffre1 - chiffre2); // 12
+    console.log(chiffre1 * chiffre2); // 325
+    console.log(chiffre1 / chiffre2); // 1.9230769230769231
+    console.log(chiffre1 % chiffre2); // 12
+    let chiffre3 = 27;
+    console.log(chiffre3 % 2); // 0 => pair, 1 => impair
+
+    // Opérateurs de comparaisons
+    // ==, ===, !=, !==, >, < , <= ,>=
+    const var1 = 'banane';
+    const var2 = 'kiwi';
+    const var3 = 'banane';
+    console.log(var1 == var2); // false
+    console.log(var1 === var3); // true
+    let d = 12;
+    let e = '12';
+    let f = 15;
+    console.log(d == e); // true
+    console.log(d === e); // false
+    console.log(var1 != var2); // true
+    console.log(d > f); // false
+    console.log(d < f); // true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
