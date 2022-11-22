@@ -82,6 +82,45 @@ do {
 /////////////////////
 // FOR
 ///////////////////////
+// for(initialisation; condition; incrementation) {
+//
+// }
+// les chiffres de 1 à 100 grâce à document.write
+for(let i = 1; i <= 100; i++) {
+    document.write(i + ' ');
+}
+// les chiffres de 5 à 25 séparés par virgule, en enlevant la dernière virgule
+document.write('<br>');
+for(let i = 5; i <= 25; i++) {
+    document.write(i);
+    if(i < 25) {
+        document.write(',');
+    }
+}
+document.write('<br>');
+// affichez les multiples de 5 compris entre 0 et 120 séparés par tiret du 6
+let countTotal = 120;
+for(let i = 0; i <= countTotal; i+=5) {
+    document.write(i);
+    if(i < countTotal) {
+        document.write('-');
+    }
+}
+document.write('<br>');
+// affichez les nombres pairs de 19 à 67, séparés par balise br
+for(let i = 19; i<= 67; i++) {
+    if(i % 2 == 0) {
+        document.write(i + '<br>');
+    }
+}
+let date = new Date();
+console.log(date);
+let annee = date.getFullYear();
+console.log(annee);
+// affichez toutes les années depuis votre naissance. Chaque année doit être affichée dans une balise "p", ayant une classe  "birth_date"
+
+// // affichez , en html, les nombres de 1 à 100, Les chiffres de 40 à 48 et 78 à 89 doivent être en vert et les autres en rouge.
+
 
 
 
