@@ -68,22 +68,81 @@ console.log({str1,str2,str3,str4});
 // \n // saut de ligne
 // \t // tabulation
 
+// Concaténation
+console.log('Hello le ' + str3); // Hello le Mars
+const x = 'Bonjour';
+// backticks
+const z = `
+    <p>Je vous dit ${x.toLowerCase()}</p>
+    <p>${ ( 34+45.54546).toFixed(2) }</p>
+`;
+console.log(z);
 
+let user = {
+    prenom: 'Michel',
+    age: 12,
+    notes: {
+        php: 12,
+        js: 15,
+        css: 14
+    }
+}
+console.log(`Je suis ${user.prenom} et j'ai ${user.age} ans. Ma note en php est ${user.notes.php}, en js ${user.notes.js} et en css ${user.notes.css}. Ma moyenne est de ${ ((user.notes.php + user.notes.js + user.notes.css) / 3).toFixed(2) }`);
 
+// index, length
+let utilisateur = 'MichMlle';
+console.log(utilisateur[1]); // i
+console.log(utilisateur[3]); // h
+// Nbre de caractères dans une chaine
+console.log(utilisateur.length); // 8
 
+console.log(utilisateur.charAt()); // M
+console.log(utilisateur.charAt(3)); // h
+console.log(utilisateur.endsWith('lle')); // true
+console.log(utilisateur.startsWith('mi')); // false
+console.log(utilisateur.startsWith('Michel')); // true
+// replace
+console.log(utilisateur.replace('M', 'Jean M')); // Jean Michelle
+console.log(utilisateur.replaceAll('M', 'Jean M')); // Jean MichJean Mlle
+// search
+console.log(utilisateur.search('e')); // 4
+const utilisateur2 = '      Bernard      ';
+console.log(utilisateur2.trim()); // 'Bernard'
+console.log(utilisateur2.toUpperCase().trim()); // BERNARD
+console.log(utilisateur2.toLowerCase().trim()); // bernard
 
+let ville = 'istanbul';
+let locale = 'fr';
+console.log(ville.toLocaleUpperCase(locale)); // ISTANBUL
+console.log(ville.toLocaleUpperCase('tr')); // İSTANBUL
 
+// includes
+let animal = 'petit pangolin';
+console.log(animal.includes('Pangolin')); // false
+console.log(animal.includes('pangolin')); // true
+console.log(animal.includes('pangolin', 8)); // false
+console.log(animal.includes('pangolin', 3)); // true
 
+// indexOf, lastIndexOf
+let hello = 'Bonjour andrée! Bonjour Jacky';
+console.log(hello.indexOf('Bonjour')); // 0
+console.log(hello.indexOf('bonjour')); // -1
+console.log(hello.indexOf('Bonjour', 10)); // 16
 
+console.log(hello.lastIndexOf('Bonjour')); // 16
+console.log(hello.lastIndexOf('bonjour')); // -1
+// split
+const bandes = 'Jean,Michel,Jacky,Bernard';
+const tabPotes = bandes.split(',');
+console.log(tabPotes); // ['Jean', 'Michel', 'Jacky', 'Bernard']
+const tabPotes2 = bandes.split('e');
+console.log(tabPotes2); // ['J', 'an,Mich', 'l,Jacky,B', 'rnard']
+const tabPotes3 = bandes.split(',', 2);
+console.log(tabPotes3); // ['Jean', 'Michel']
 
-
-
-
-
-
-
-
-
-
-
-
+// concat
+console.log('Bonjour'.concat(' bernard.', ' Comment' , ' vas' , ' tu', '?')); // Bonjour bernard. Comment vas-tu?
+// slice
+const bandes2 = 'Jean,Michel,Jacky,Bernard';
+console.log(bandes2.slice(2,5)); // an,
+console.log(bandes2.slice(10)); // l,Jacky,Bernard
