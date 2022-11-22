@@ -118,8 +118,27 @@ console.log(date);
 let annee = date.getFullYear();
 console.log(annee);
 // affichez toutes les années depuis votre naissance. Chaque année doit être affichée dans une balise "p", ayant une classe  "birth_date"
+for(let i = 1978; i <= annee; i++) {
+    //document.write('<p class="birth_date">'+i+'</p>');
+    document.write(`<p class="birth_date">${i}</p>`);
+}
+// // affichez , dans balise html, les nombres de 1 à 100, Les chiffres de 40 à 48 et 78 à 89 doivent être en vert et les autres en rouge.
+for(let i = 1; i <= 100; i++) {
+    // let color = 'red';
+    // if(i >= 40 && i<= 48 ||  i>= 78 && i<= 89) {
+    //      color = 'green';
+    // }
+    let color = (i >= 40 && i<= 48 ||  i>= 78 && i<= 89) ? 'green' : 'red';
+    document.write('<p style="color:'+color+';">'+i+'</p>')
+}
+////////////////////////////////
+// tableaux & boucles
+////////////////////////////////
 
-// // affichez , en html, les nombres de 1 à 100, Les chiffres de 40 à 48 et 78 à 89 doivent être en vert et les autres en rouge.
+
+
+
+
 
 
 
