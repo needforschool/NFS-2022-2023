@@ -135,6 +135,64 @@ for(let i = 1; i <= 100; i++) {
 // tableaux & boucles
 ////////////////////////////////
 
+const fruits = ['Banane', 'Kiwi', 'Papaye', 'Tomate', 'Litchi'];
+console.log(fruits);
+console.log(fruits[1]); // Kiwi
+let countFruit = fruits.length;
+console.log(countFruit);
+// À l'aide de for afficher tous les fruits
+for(let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+fruits.forEach(function(fruit, index){
+    console.log(fruit);
+    console.log(index);
+});
+fruits.forEach((fruit,index) => {
+    console.log(fruit);
+    console.log(index);
+});
+// EXO
+const bagnoles = ['gti','bmw','Renault sport jante alu', 'Merco', 'Combi vw'];
+// Grâce à un for & ensuite avec forEach
+// faire afficher dans votre document un ul avec autant de li que de bagnoles
+document.write('<ul>');
+for(let i = 0;i < bagnoles.length;i++) {
+    document.write('<li>'+bagnoles[i]+'</li>');
+}
+document.write('</ul>');
+
+document.write('<ul>');
+bagnoles.forEach((voiture) => {
+    document.write('<li>'+voiture+'</li>');
+})
+document.write('</ul>');
+
+const users = [
+    {
+        name: 'Michel',
+        age: 55
+    },
+    {
+        name: 'Zozo',
+        age: 34
+    },
+    {
+        name: 'Koko',
+        age: 24
+    },
+];
+
+for(let i = 0; i< users.length; i++) {
+    document.write('<p>je suis '+users[i].name+' et j\'ai '+users[i].age+' ans</p>')
+}
+users.forEach((user) => {
+    document.write('<p>je suis '+user.name+' et j\'ai '+user.age+' ans</p>')
+});
+
+
+
+
 
 
 
