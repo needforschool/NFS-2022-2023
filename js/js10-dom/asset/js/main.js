@@ -91,9 +91,32 @@ setTimeout(() => {
 // contains
 console.log(section.classList.contains('open')); // true
 
+// Écrire un code qui permet d'ajouter la class 'genial' si elle n'existe pas dans le lien a, ou de l'enlever si elle existe déjà. Sans utiliser toggle()
 
-
-
-
+if(a.classList.contains('genial')) {
+    // class existe
+    console.log('enlever la class');
+    a.classList.remove('genial');
+} else {
+    // class existe pas
+    console.log('Ajouter la class');
+    a.classList.add('genial');
+}
 
 // DATA SET
+const infos = document.querySelector('#infos');
+console.log(infos);
+console.log(infos.dataset.id);
+console.log(infos.dataset.idCategory);
+let prenom = infos.dataset.prenom;
+console.log(prenom);
+
+// let html = <p>Je suis prenom, mon id est 2, et ma categorie : livre </p>
+// innerHTML => remplacer le texte de la boite infos par votre variable html
+let html = `<p>je suis ${prenom}, mon id est le ${infos.dataset.id} et ma catégorie est ${infos.dataset.idCategory}</p>`;
+console.log(html);
+infos.innerHTML = html;
+
+let html2 = '<p>Je suis '+prenom+', mon id est le '+infos.dataset.id+' et ma catégorie est '+infos.dataset.idCategory+' </p>';
+
+infos.innerHTML = html2
