@@ -36,9 +36,26 @@ const titles = document.getElementsByClassName('megatitle');
 console.log(titles);
 
 // au bout de 4 secondes après chargement de la page ,
-// transformer tous les titres avec une font-size de 4Rem
+// transformer tous les titres avec une font-size de 3rem
+setTimeout(() => {
+    for(let i = 0; i < titles.length; i++) {
+        titles[i].style.fontSize = '3rem'
+    }
+}, 4000);
+// Selection ( querySelector, querySelectorAll );
+// querySelector
+const img = document.querySelector('section#blog img.img_test');
+console.log({img});
+img.style.width = "100px";
+const section = document.querySelector('#blog');
+console.log({section})
+// querySelectorAll
 
-
-
-
-
+const mesTitres = document.querySelectorAll('#blog h3');
+console.log(mesTitres);
+mesTitres.forEach((titre) => {
+    titre.style.color = 'lime';
+});
+for(let i = 0;i < mesTitres.length; i++) {
+    mesTitres[i].style.color = 'lime';
+}
