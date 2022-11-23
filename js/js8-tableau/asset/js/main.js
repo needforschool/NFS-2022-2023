@@ -20,4 +20,66 @@ console.log(tab3);
 console.log(tab3[0][1][2][2].b[0]); // dudu
 
 // if is a array
+console.log(typeof tab2); // object
+console.log(Array.isArray(tab2)); // true
+
+//
+const tab5 = ['Papaye','Kiwi','Banane', 'Tomate'];
+console.log(tab5.length); //  4
+console.log(tab5[2]); // Banane
+tab5[1] = 'Litchi';
+//
+// Ajouter à la fin "Groseille"
+tab5.push('Groseille');
+tab5.push('Courgettes');
+console.log(tab5);
+
+// Enlever le dernier
+tab5.pop();
+console.log(tab5);
+
+// Ajouter au début
+tab5.unshift('Fraise');
+tab5.unshift('Mangue');
+console.log(tab5);
+
+// Enlever au début
+tab5.shift();
+console.log(tab5);
+
+// copier un tableau
+const copyFruit = tab5;
+copyFruit[1] = 'dada';
+console.log({tab5,copyFruit});
+
+// ok pour copier avec des tableaux qui contienne d'object
+const tab6 = [...copyFruit]
+tab6[1] = 'michel';
+console.log({tab6,copyFruit});
+
+const tab7 = ['Banane', { car: 'pigeot'}, 'kiwi'];
+const tab8 = [...tab7];
+tab8[1].car = 'punto';
+console.log({tab7,tab8});
+
+// La bonne solution pour une copie
+const tab9 = ['Banane', { car: 'pigeot'}, 'kiwi'];
+const copy9 = JSON.parse(JSON.stringify(tab9));
+copy9[1].car = 'punto';
+console.log({tab9,copy9});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
