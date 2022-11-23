@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --vert: #4f805d;
+    --vertclair: #8bb092;
+    --gris: #ddd;
+    --blanc: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+img {
+    vertical-align: bottom;
+    /*width: 100%;*/
+}
+
+body {
+    background-color: var(--vertclair);
+}
+
+.wrap {
+    width:100%;max-width: 1000px; margin: 0 auto;
+}
+section {
+    padding : 1rem;
+    transition: all 4s cubic-bezier(0,2.26,.45,1.18);
+}
+section.open {
+    padding : 4rem
+}
