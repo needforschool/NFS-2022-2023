@@ -68,9 +68,29 @@ const copy9 = JSON.parse(JSON.stringify(tab9));
 copy9[1].car = 'punto';
 console.log({tab9,copy9});
 
+// Itérer sur tableau
 
+const legumes = ['Courgette', 'Radis', 'Blette', 'Courge'];
 
+// for
+for(let i = 0; i < legumes.length; i++) {
+    document.write(`<p>${legumes[i]}</p>`)
+}
+document.write(`<hr>`)
+// forEach
+legumes.forEach(function(legume) {
+    document.write(`<p>${legume}</p>`)
+});
+document.write(`<hr>`)
+legumes.forEach((l) => {
+    document.write(`<p>${l}</p>`)
+});
+document.write(`<hr>`)
 
+// for
+for (let legume of legumes) {
+    document.write(`<p>${legume}</p>`)
+}
 
 
 
