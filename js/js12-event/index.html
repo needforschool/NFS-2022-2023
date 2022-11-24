@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS 12 - Events</title>
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body>
+<div class="wrap">
+    <p onclick="console.log('Bravo, tu click trop bien')">Click ici</p>
+    <p onclick="clickPerso()">Click ici encore</p>
+
+    <ul>
+        <li onclick="changeColor(this, 'green')">Courgettes</li>
+        <li onclick="changeColor(this, 'purple')">Arroches</li>
+        <li onclick="changeColor(this)">Choux</li>
+    </ul>
+
+    <div id="infos">
+        <p>Ici les informations</p>
+    </div>
+
+</div>
+
+
+<script src="asset/js/main.js"></script>
+</body>
+</html>
