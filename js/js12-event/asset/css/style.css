@@ -33,3 +33,16 @@ body {
     background-color: gainsboro;
     padding: 2rem;
 }
+#boite {
+    width:200px; height:200px;
+    background-color: green;
+    color:#fff;
+    font-size: 4rem;
+    position: absolute; top:0; left:0;
+    transition: left 5s, top 2s, color 10s;
+    transition-timing-function: cubic-bezier(.42,-0.77,.54,1.68);
+}
+#boite.open {
+    left: 600px;top:300px;
+    background-color: purple;
+}
