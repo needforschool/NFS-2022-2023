@@ -85,7 +85,26 @@ box3.addEventListener('click', function(evt) {
     evt.stopPropagation(); // empêche le bouillonnement
     console.log('Click box 3')
 });
+// Prevent
+const lien = document.querySelector('#prevent a');
+lien.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    console.log('click sur le lien')
+})
 
-
+const form = document.querySelector('#formulaire');
+const ul = document.querySelector('#prevent ul')
+const input = document.querySelector('#prevent input[type=text]')
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    console.log('Formulaire soumis');
+    let data = input.value.trim();
+    if(data != '') {
+       const lii = document.createElement('li');
+       lii.innerText = data
+        ul.append(lii);
+       input.value = ''
+    }
+})
 
 
