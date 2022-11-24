@@ -68,7 +68,23 @@ boite.addEventListener('click', function() {
     }
 })
 
-
+///////////////////////////////////
+// Bubbling => bouillonnement
+//////////////////////////////////
+const box1 = document.querySelector('#box1');
+const box2 = document.querySelector('#box2');
+const box3 = document.querySelector('#box3');
+box1.addEventListener('click', function() {
+    console.log('Click box 1')
+});
+box2.addEventListener('click', function(evt) {
+    evt.stopPropagation();
+    console.log('Click box 2')
+})
+box3.addEventListener('click', function(evt) {
+    evt.stopPropagation(); // empêche le bouillonnement
+    console.log('Click box 3')
+});
 
 
 

@@ -46,3 +46,8 @@ body {
     left: 600px;top:300px;
     background-color: purple;
 }
+
+#box1 {padding: 3rem; background-color: green;}
+#box2 {padding: 3rem; background-color: red;}
+#box3 {padding: 3rem; background-color: blue;}
+
