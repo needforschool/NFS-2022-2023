@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, ol {
+    list-style: none;
+}
+body {
+    background-color: gainsboro;
+    color: black;
+    font: 400 14px/1.4 'Verdana', 'Arial', sans-serif;
+}
+.wrap {
+    max-width: 1000px; width:100%; margin: 0 auto;
+}
+ul.ulcenter {text-align: center;}
+ul.ulcenter li {display: inline-block;}
+a {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: inline-block;
+    color:#000;
+}
+a:hover {
+    background-color: green;
+    color:#fff;
+}
+#counter {
+    text-align: center;
+    font-size: 5rem;
+}
+.wrap {
+    max-width: 1200px; width:100%; margin: 0 auto;
+}
+.wrapform {
+    max-width: 500px; width:100%; margin: 0 auto;
+}
+label {display:block;margin-top: 2rem;}
+input, textarea, select {
+    width: 100%;padding: 1rem;
+
+}
+input[type=submit] {
+    margin-top: 2rem;
+    cursor:pointer;
+    background-color: green; color:#fff; border:none;
+}
+input[type=submit]:hover {
+    background-color: #fff; color:green;
+}
+.error {
+    color: red;
+}
+.success {
+    color: green;
+}
+
