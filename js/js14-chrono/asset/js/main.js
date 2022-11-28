@@ -17,16 +17,49 @@ setTimeout(function() {
 }, 2000);
 
 // setInterval
-let interval = setInterval(function() {
-    console.log('ok set interval')
-}, 1000);
-const stop = document.querySelector('#stop');
-stop.addEventListener('click', function(e) {
-    e.preventDefault();
-    console.log('STOP');
-    clearInterval(interval);
-})
+// let interval = setInterval(function() {
+//     console.log('ok set interval')
+// }, 1000);
+//
+// const stop = document.querySelector('#stop');
+// stop.addEventListener('click', function(e) {
+//     e.preventDefault();
+//     console.log('STOP');
+//     clearInterval(interval);
+// });
 
+// chronomètre
+// selection des balises
+const btnStart = document.querySelector('#btn_start');
+const btnStop = document.querySelector('#btn_stop');
+const btnReset = document.querySelector('#btn_reset');
+const counter = document.querySelector('#counter');
+let count = 0;
+let intervalChrono;
+// fonction
+function startChrono(evt) {
+    intervalChrono = setInterval(() => {
+        counter.innerText = ++count;
+    }, 1000);
+    btnStart.classList.add('hidden');
+    btnStop.classList.remove('hidden');
+    btnReset.classList.remove('hidden');
+}
+function stopChrono() {
+    clearInterval(intervalChrono);
+    btnStart.classList.remove('hidden');
+    btnStop.classList.add('hidden');
+    btnReset.classList.add('hidden');
+}
+function resetChrono() {
+    stopChrono();
+    count = 0
+    counter.innerText = count;
+}
+// addEventListener
+btnStart.addEventListener('click', startChrono);
+btnStop.addEventListener('click', stopChrono);
+btnReset.addEventListener('click', resetChrono);
 
 
 
