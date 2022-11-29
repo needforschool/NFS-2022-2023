@@ -8,6 +8,7 @@ ul, ol {
 }
 body {
     background-color: gainsboro;
+    overflow-x: hidden;
 }
 .wrap {max-width: 1000px;width:100%;margin: 0 auto;}
 #masthead {
@@ -38,9 +39,42 @@ body {
     fill: #fff;
 }
 
+#menu_burger {
+    display:none;
+    background-color: #4f805d;
+    position: absolute;
+    top:0;right:-200px;
+    padding: 4rem 1rem 1rem 1rem;
+    transition: right 1s cubic-bezier(.67,.35,.61,.96);
+}
+#menu_burger.opened {
+    right:0;
+}
+#menu_burger ul li {
+    padding: 1rem;
+}
+#menu_burger ul li a {
+    color:#fff;
+    font-size: 1.4rem;
+    text-decoration:none;
+}
+#closer {
+    position: absolute;
+    top:1rem;right:1rem;
+
+}
+#menu_burger svg{
+    width:40px;
+}
+#menu_burger svg path{
+    fill: #fff;
+}
 
 .mobile {display: none;}
 @media screen and (max-width: 750px) {
     .desk {display: none;}
     .mobile {display: block;}
+    #menu_burger {
+        display: block;
+    }
 }
