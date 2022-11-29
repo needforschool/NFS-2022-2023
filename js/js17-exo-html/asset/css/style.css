@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, ol {
+    list-style: none;
+}
+body {
+    background-color: gainsboro;
+}
+.wrap {max-width: 1000px;width:100%;margin: 0 auto;}
+#masthead {
+    background-color: #79C1C8 ;
+    padding: 1rem 0;
+}
+#masthead .logo img {
+    width:220px;
+}
+#masthead .wrap {
+    display: flex;justify-content: space-between;align-items: center;
+    padding: 0 1rem;
+}
+#masthead nav ul {
+    display: flex;align-items:center;gap:2rem
+}
+#masthead nav ul a {
+    color:#fff;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+#masthead nav svg {
+    width: 40px;
+    cursor:pointer;
+}
+#masthead nav svg path {
+    fill: #fff;
+}
+
+
+.mobile {display: none;}
+@media screen and (max-width: 750px) {
+    .desk {display: none;}
+    .mobile {display: block;}
+}
