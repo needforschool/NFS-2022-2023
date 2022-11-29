@@ -14,3 +14,14 @@ btn_close.addEventListener('click', function(e) {
     e.preventDefault();
     box_burger.classList.remove('opened');
 })
+// diaporama
+$(window).on('load',function() {
+    $('#diaporama').flexslider({
+        animation: "slide",
+        controlNav: true,               //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+        directionNav: false,
+        after: function(slider){
+            console.log(slider)
+        },
+    });
+});

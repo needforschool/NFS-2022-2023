@@ -41,6 +41,7 @@ body {
 
 #menu_burger {
     display:none;
+    z-index:11;
     background-color: #4f805d;
     position: absolute;
     top:0;right:-200px;
@@ -70,6 +71,11 @@ body {
     fill: #fff;
 }
 
+
+/*  flexslider */
+.flexslider {
+    border: none;
+}
 .mobile {display: none;}
 @media screen and (max-width: 750px) {
     .desk {display: none;}
