@@ -37,3 +37,16 @@ btn_test2.addEventListener('click', function() {
             response_test2.innerText = data
         })
 })
+
+// test 3
+const btn_test3 = document.querySelector('#btn_test3');
+const response_test3 = document.querySelector('#js_response_test_3');
+btn_test3.addEventListener('click', function() {
+    fetch('ajax/test3.php')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            console.log(data)
+        })
+})

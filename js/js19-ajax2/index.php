@@ -12,6 +12,8 @@ include('inc/header.php');
     <button id="btn_test2">click ici test 2</button>
     <div id="js_response_test_2"></div>
 
+    <button id="btn_test3">click ici test 3</button>
+    <div id="js_response_test_3"></div>
 
 
 <?php include('inc/footer.php');
