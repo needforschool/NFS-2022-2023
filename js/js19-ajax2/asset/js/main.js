@@ -47,6 +47,26 @@ btn_test3.addEventListener('click', function() {
             return response.json();
         })
         .then(function(data) {
-            console.log(data)
-        })
-})
+            console.log(data);
+            // SOLUTION 1
+            // let html = `<p style="color:${data.color1};">${data.html1}</p>
+            // <p style="color:${data.color2};">${data.html2}</p>
+            // <p>Maths: ${data.notes.maths}, PHP: ${data.notes.php}</p>`;
+            //
+            // response_test3.innerHTML = html
+
+            // SOLUTION 1
+            const p1 = document.createElement('p');
+            const p2 = document.createElement('p');
+            const p3 = document.createElement('p');
+
+            p1.style.color = data.color1;
+            p1.innerText = data.html1;
+            p2.style.color = data.color2;
+            p2.innerText = data.html2;
+            p3.innerText = `Maths: ${data.notes.maths}, PHP: ${data.notes.php}`;
+            response_test3.append(p1);
+            response_test3.append(p2);
+            response_test3.append(p3);
+        });
+});
