@@ -106,8 +106,9 @@ function getBlague() {
         .then(function(response) {
             return response.json();
         })
-        .then(function(data) {
-            console.log(data);
+        .then(function(blague) {
+            console.log(blague.value);
+            response_norris.innerHTML = blague.value
         })
         .catch(function(err) {
             console.log(err);
@@ -115,3 +116,40 @@ function getBlague() {
 }
 getBlague();
 
+// api
+// https://dog.ceo/api/breeds/image/random
+// au clic sur un btn => afficher une nouvelle image d'un chien
+const btn_dog = document.querySelector('#btn_dog');
+const response_dog = document.querySelector('#js_response_dog');
+
+async function getDogImage() {
+    try {
+        let response = await fetch('https://dog.ceo/api/breeds/image/random')
+        let data = await response.json();
+        console.log(data);
+        const img = document.createElement('img');
+        img.src = data.message
+        response_dog.prepend(img);
+    } catch (e) {
+        console.log(e)
+    }
+}
+btn_dog.addEventListener('click', getDogImage);
+
+//
+const btn_pixel = document.querySelector('#btn_pixel');
+const response_pixel = document.querySelector('#js_response_pixel');
+
+async function getImages() {
+    let response = await fetch('https://picsum.photos/v2/list?limit=5')
+    let images = await response.json();
+    console.log(images);
+    response_pixel.innerHTML = '';
+    images.forEach(function(i) {
+        const image = document.createElement('img');
+        image.src = i.download_url
+        image.alt = i.author
+        response_pixel.append(image)
+    });
+}
+btn_pixel.addEventListener('click', getImages)

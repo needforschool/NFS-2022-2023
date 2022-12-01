@@ -20,5 +20,11 @@ include('inc/header.php');
 
     <div id="response_norris"></div>
 
+    <button id="btn_dog">Get one image dog</button>
+    <div id="js_response_dog"></div>
+
+
+    <button id="btn_pixel">Get 5 images pixel</button>
+    <div id="js_response_pixel"></div>
 
 <?php include('inc/footer.php');
