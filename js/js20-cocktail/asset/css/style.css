@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, ol {
+    list-style: none;
+}
+img {width: 100%;}
+body {
+    background-color: gainsboro;
+    overflow-x: hidden;
+}
+.wrap {max-width: 1000px;width:100%;margin: 0 auto;}
+h2.title{
+    font-size: 2rem;text-align: center;
+}
+
+#letters {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+#letters button {
+    padding: .3rem;
+}
+#letters button.active {
+    background-color: lime;
+}
+
+#cocktails {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#cocktails .one_cocktail {
+    width:32%;margin-bottom: 2rem;
+}
+#cocktails .one_cocktail h2 {
+    text-align: center;
+}
+@media screen and (max-width: 750px) {
+
+}
