@@ -15,5 +15,10 @@ include('inc/header.php');
     <button id="btn_test3">click ici test 3</button>
     <div id="js_response_test_3"></div>
 
+    <button id="btn_test4">Get random city</button>
+    <div id="js_response_test_4"></div>
+
+    <div id="response_norris"></div>
+
 
 <?php include('inc/footer.php');

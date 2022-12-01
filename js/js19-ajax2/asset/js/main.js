@@ -70,3 +70,48 @@ btn_test3.addEventListener('click', function() {
             response_test3.append(p3);
         });
 });
+7
+
+// test 4
+const btn_test4 = document.querySelector('#btn_test4');
+const response_test4 = document.querySelector('#js_response_test_4');
+btn_test4.addEventListener('click', function() {
+    fetch('ajax/test4.php')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            response_test4.innerHTML = '';
+            data.forEach(function(ville) {
+                console.log(ville);
+                const div = document.createElement('div');
+                const h2 = document.createElement('h2');
+                const p = document.createElement('p');
+                h2.innerText = ville.Name
+                p.innerText = ville.District
+                div.appendChild(h2)
+                div.appendChild(p)
+                response_test4.append(div)
+            });
+        })
+});
+
+
+
+
+// API 1 => https://api.chucknorris.io/
+const response_norris = document.querySelector('#response_norris');
+function getBlague() {
+    fetch('https://api.chucknorris.io/jokes/random')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            console.log(data);
+        })
+        .catch(function(err) {
+            console.log(err);
+        })
+}
+getBlague();
+
